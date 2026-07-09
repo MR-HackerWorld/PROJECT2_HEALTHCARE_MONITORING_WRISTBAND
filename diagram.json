@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "author": "IoT Healthcare Wristband",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-ssd1306", "id": "oled", "top": 323.5, "left": -36.5, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -9.6, "left": 4.84, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "mpu", "top": -111.38, "left": 184.72, "attrs": {} },
+    { "type": "chip-max30102", "id": "max", "top": -190.98, "left": -4.8, "attrs": {} },
+    {
+      "type": "wokwi-ds18b20",
+      "id": "temp",
+      "top": 171.67,
+      "left": 205.68,
+      "attrs": { "temperature": "112" }
+    },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 12, "left": 193.8, "attrs": {} },
+    { "type": "wokwi-rgb-led", "id": "rgb", "top": -120, "left": -200, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btn", "top": 54.2, "left": -201.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "oled:DATA", "esp:21", "yellow", [ "v-57.6", "h115.2", "v-249.6" ] ],
+    [ "oled:CLK", "esp:22", "green", [ "v-48", "h135", "v-240", "h-28.8", "v-9.6" ] ],
+    [ "oled:3V3", "esp:3V3", "red", [ "v-67.2", "h-47", "v-278.4" ] ],
+    [ "oled:GND", "esp:GND.3", "black", [ "v-28.3", "h86.6", "v-211.2", "v-57.6" ] ],
+    [ "esp:21", "mpu:SDA", "green", [ "h34.44", "v-191.6", "h180.4" ] ],
+    [ "esp:22", "mpu:SCL", "green", [ "h24.84", "v-172.4", "h199.6" ] ],
+    [ "esp:3V3", "mpu:VCC", "red", [ "h-19.05", "v-172.8", "h355.12" ] ],
+    [ "esp:GND.2", "mpu:GND", "black", [ "v-163.2", "h230.32" ] ],
+    [ "esp:4", "temp:DQ", "blue", [ "h19.2", "v96", "h96" ] ],
+    [ "esp:3V3", "temp:VCC", "red", [ "h-38.25", "v240", "h259.2" ] ],
+    [ "esp:GND.1", "temp:GND", "black", [ "h-19.05", "v105.6", "h220.8" ] ],
+    [ "esp:15", "buzzer:1", "purple", [ "h28.8", "v-67.2", "h268.8" ] ],
+    [ "esp:GND.3", "buzzer:2", "black", [ "h19.2", "v38.4", "h288.4" ] ],
+    [ "esp:12", "rgb:R", "red", [ "h-95.85", "v-134.4", "h-105.1" ] ],
+    [ "esp:13", "rgb:G", "green", [ "h-76.65", "v-172.8", "h-106.4" ] ],
+    [ "esp:14", "rgb:B", "blue", [ "h-67.05", "v-153.6", "h-96", "v-47.2" ] ],
+    [ "esp:GND.1", "rgb:COM", "black", [ "h-86.25", "v-153.6", "h-105.6", "v-56.4" ] ],
+    [ "esp:27", "btn:1.l", "orange", [ "h-28.65", "v-76.8", "h-182.4", "v28.8" ] ],
+    [ "esp:3V3", "btn:2.l", "red", [ "h-220.65", "v67" ] ],
+    [ "esp:GND.1", "max:GND", "black", [ "h-57.45", "v-345.6" ] ],
+    [ "esp:3V3", "max:VIN", "red", [ "h-28.65", "v-249.6", "v-28.8" ] ],
+    [ "esp:21", "max:SDA", "green", [ "h19.2", "v-48" ] ],
+    [ "esp:22", "max:SCL", "green", [ "h9.6", "v-48", "h38.4", "v-172.8", "h-49.81" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,11 @@
+{
+  "name": "MAX30102",
+  "author": "IoT Healthcare",
+  "pins": [
+    "VIN",
+    "GND",
+    "SDA",
+    "SCL"
+  ],
+  "i2cAddress": 87
+}
