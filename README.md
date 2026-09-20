@@ -10,10 +10,10 @@ Submitted in partial fulfilment of the requirement of the degree of
 K.R Mangalam University  
 
 ### Team Members
+- Avanish Thapliyal (2301010243)  (Leader)
 - Nikhil Singh (2301010239)  
 - Rucchika Kapoor (2301010240)  
 - Yash Karmakar (2301010217)  
-- Avanish Thapliyal (2301010243)  
 - Kamaljeet Hooda (2301010244)  
   
 
